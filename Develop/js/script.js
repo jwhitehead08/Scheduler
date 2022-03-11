@@ -9,11 +9,10 @@ var timeB = parseInt(timeSlot.innerHTML);
 console.log(timeB); 
 
 
-const dateNew = new Date();
-var hours = dateNew.getHours();
-var newHours = parseInt(hours);
+var hours = moment().hours()
 
-console.log(newHours);
+
+console.log(hours);
 
 
 
@@ -29,6 +28,13 @@ for (let i = 9; i < 18; i++) {
     var userPlan = localStorage.getItem(i)
     var time = "#"+i
     $(time).val(userPlan)
+    if (i < hours) {
+        $(time).addClass("past")
+    } else if (i === hours) {
+        $(time).addClass("present")
+    } else {
+        $(time).addClass("future")
+    }
 }
   
 
