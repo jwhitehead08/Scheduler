@@ -22,7 +22,14 @@ $(".saveBtn").on("click", function(){
     var userPlan = $(this).siblings("textarea").val()
     var time = $(this).siblings("textarea").attr("id")
     console.log(userPlan, time)
+    localStorage.setItem(time, userPlan)
 })
+
+for (let i = 9; i < 18; i++) {
+    var userPlan = localStorage.getItem(i)
+    var time = "#"+i
+    $(time).val(userPlan)
+}
   
 
 // List:
