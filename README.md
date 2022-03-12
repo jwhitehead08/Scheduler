@@ -12,7 +12,7 @@ WEBSITE
 
     Visit the deployed website at the following link: 
 
-    https://jwhitehead08.github.io/password-gen/
+    https://jwhitehead08.github.io/Scheduler/
 
 
 Screenshot of Webpage
