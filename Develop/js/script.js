@@ -1,29 +1,21 @@
 var todayDate = document.getElementById('currentDay');
 var dateNow = moment().format('MMMM Do YYYY');
 var timeSlot = document.getElementById('time-slot');
-descriptEl = document.getElementById('description');
-
-todayDate.innerText = dateNow;
 var now = moment();
-var timeB = parseInt(timeSlot.innerHTML);
-console.log(timeB); 
-
-
 var hours = moment().hours()
 
-
-console.log(hours);
-
-
+// Display today's date in header
+todayDate.innerText = dateNow;
 
 
+// set the user input to local storage
 $(".saveBtn").on("click", function(){
     var userPlan = $(this).siblings("textarea").val()
     var time = $(this).siblings("textarea").attr("id")
-    console.log(userPlan, time)
     localStorage.setItem(time, userPlan)
 })
 
+// get local storage; change colors based on time of day
 for (let i = 9; i < 18; i++) {
     var userPlan = localStorage.getItem(i)
     var time = "#"+i
@@ -37,11 +29,6 @@ for (let i = 9; i < 18; i++) {
     }
 }
   
-
-// List:
-// Input for description
-// local storage
-// save button: icon, button
 
 
 
